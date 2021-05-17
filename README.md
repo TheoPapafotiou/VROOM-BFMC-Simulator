@@ -1,4 +1,3 @@
-_____________________
 ## Short Introduction
 
 There are **three workspaces**:
@@ -21,11 +20,10 @@ Clone this repository inside the `Documents` folder
 
 ### SETUP Guide
 
-``
-cd Documents/BFMC_Simulator/bfmc_workspace
-catkin_make 
-source devel/setup.bash
-``
+`cd Documents/VROOM-BFMC-Simulator/bfmc_workspace`<br />
+`catkin_make`<br />
+`source devel/setup.bash`<br />
+
 
 - Gazebo needs to know where the workspace's packages and models are:
     - export `models_pkg` to the `GAZEBO_MODEL_PATH` variable
@@ -34,13 +32,14 @@ source devel/setup.bash
 ```sh
 # You can either run these commands each time you want to use the workspace, or add them to the end of the `~/.bashrc` file and source it.
 # Don't forget to replace {YOUR_USER} with your actually user name
-export GAZEBO_MODEL_PATH="/home/{YOUR_USER}/Documents/BFMC_Simulator/bfmc_workspace/src/models_pkg:$GAZEBO_MODEL_PATH"
-export ROS_PACKAGE_PATH="/home/{YOUR_USER}/Documents/BFMC_Simulator/bfmc_workspace/src:$ROS_PACKAGE_PATH"
+export GAZEBO_MODEL_PATH="/home/{YOUR_USER}/Documents/VROOM-BFMC-Simulator/bfmc_workspace/src/models_pkg:$GAZEBO_MODEL_PATH"
+export ROS_PACKAGE_PATH="/home/{YOUR_USER}/Documents/VROOM-BFMC-Simulator/bfmc_workspace/src:$ROS_PACKAGE_PATH"
 ```
 
 
 `cd ..`<br />
-`cd startup workspace`<br />
+`cd startup_workspace`<br />
+`catkin_make`<br />
 `source devel/setup.bash`<br /><br />
 `cd ..` <br />
 `cd vroom_workspace`<br />
@@ -53,9 +52,9 @@ export ROS_PACKAGE_PATH="/home/{YOUR_USER}/Documents/BFMC_Simulator/bfmc_workspa
 
 Before running the files below, check that they are executables (*allow executing file as program*).
 
-`cd Documents/BFMC_Simulator/bfmc_workspace`<br />
+`cd Documents/VROOM-BFMC-Simulator/bfmc_workspace`<br />
 `source devel/setup.bash`<br />
-`roslaunch map_with_all_objects_REC.launch`<br /><br />
+`roslaunch sim_pkg map_with_all_objects_REC.launch`<br /><br />
 `cd ..`<br />
 `cd startup_workspace`<br />
 `source devel/setup.bash`<br />
@@ -66,4 +65,3 @@ Before running the files below, check that they are executables (*allow executin
 `rosrun startup_package main_FSM.py`<br /><br />
 `cd src/startup_package/src/bfmclib`<br />
 `python3 sign_detection_sim.py`
-

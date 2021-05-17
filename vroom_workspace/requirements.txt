@@ -5,5 +5,5 @@ scipy==1.2.0
 matplotlib==2.1.1
 rospy==1.14.10
 enum34==1.1.6
-opencv-python==3.4
+opencv-python==3.4.0.12
 redis==3.5.3
